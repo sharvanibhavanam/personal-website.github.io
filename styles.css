@@ -1,198 +1,181 @@
-/* ============================================
-   MODERN MINIMALIST COLORFUL DARK THEME
-   ============================================ */
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #0a0e27 0%, #1a1a3e 100%);
-    color: #e0e0e0;
-    line-height: 1.6;
-    min-height: 100vh;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 15pt;
+	line-height: 1.75;
+	color: #444;
+	background-color: #fafafa;
 }
 
-/* ============================================
-   NAVIGATION
-   ============================================ */
-
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(10, 14, 39, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 2px solid #ff006e;
-    padding: 1rem 0;
+body.is-preload * {
+	animation: none !important;
+	transition: none !important;
 }
 
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	line-height: 1.5;
+	margin: 0 0 1em 0;
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #00f5ff, #ff006e);
-    -webkit-background-clip: text;
-/* ============================================
-   SKILLS SECTION
-   ============================================ */
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.1em; }
+h5 { font-size: 0.9em; }
+h6 { font-size: 0.7em; }
 
-.skills {
-    padding: 6rem 2rem;
-    background: linear-gradient(180deg, transparent, rgba(255, 0, 110, 0.05));
-    border-top: 1px solid rgba(0, 245, 255, 0.2);
+a {
+	color: #0096ff;
+	text-decoration: none;
+	transition: color 0.3s;
 }
 
-.skills h2,
-.experience h2,
-.contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    text-align: center;
-    background: linear-gradient(135deg, #00f5ff, #ffd60a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+a:hover {
+	color: #0078cc;
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+ul {
+	list-style: none;
 }
 
-.skill-card {
-    background: rgba(255, 0, 110, 0.1);
-    border: 2px solid rgba(0, 245, 255, 0.3);
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
+li {
+	margin-bottom: 0.5em;
 }
 
-.skill-card:hover {
-    background: rgba(0, 245, 255, 0.1);
-    border-color: #00f5ff;
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 245, 255, 0.2);
+.icon {
+	text-decoration: none;
+	border-bottom: none;
+	position: relative;
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
+	text-align: center;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	margin: 0 0.3em 0.3em 0;
+	transition: all 0.3s;
 }
 
-.skill-card i {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, #00f5ff, #ff006e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.icon:hover {
+	background-color: #0096ff;
+	color: white;
+	border-color: #0096ff;
 }
 
-.skill-card h3 {
-    font-size: 1.2rem;
-    color: #e0e0e0;
+.icon.brands {
+	font-size: 0.7em;
 }
 
-/* ============================================
-   EXPERIENCE SECTION
-   ============================================ */
-
-.experience {
-    padding: 6rem 2rem;
-    border-top: 1px solid rgba(0, 245, 255, 0.2);
+.icon .label {
+	display: none;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+#header {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 275px;
+	height: 100vh;
+	background: white;
+	border-right: 1px solid #ddd;
+	padding: 40px 30px;
+	overflow-y: auto;
+	z-index: 1000;
 }
 
-.experience-timeline {
-    position: relative;
-    padding: 2rem 0;
+#header header {
+	margin: 0 0 2em 0;
 }
 
-.experience-timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(180deg, #00f5ff, #ff006e);
+.image.avatar {
+	position: relative;
+	display: block;
+	margin: 0 0 1.5em 0;
 }
 
-.exp-item {
-    display: flex;
-    margin-bottom: 3rem;
-    position: relative;
+.image.avatar img {
+	width: 100%;
+	border-radius: 100%;
+	border: 1px solid #ddd;
+	display: block;
 }
 
-.exp-item:nth-child(odd) {
-    flex-direction: row-reverse;
+#logo a {
+	color: #333;
+	font-weight: 700;
+	text-decoration: none;
 }
 
-.exp-marker {
-    width: 20px;
-    height: 20px;
-    background: #ff006e;
-    border: 3px solid #0a0e27;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 0 20px rgba(255, 0, 110, 0.4);
+#logo a:hover {
+	color: #0096ff;
 }
 
-.exp-content {
-    width: 45%;
-    background: rgba(255, 0, 110, 0.08);
-    border: 2px solid rgba(0, 245, 255, 0.2);
-    padding: 2rem;
-    border-radius: 10px;
-    transition: all 0.3s ease;
+#nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
-.exp-content:hover {
-    background: rgba(0, 245, 255, 0.1);
-    border-color: #00f5ff;
-    box-shadow: 0 10px 30px rgba(0, 245, 255, 0.1);
+#nav li {
+	margin-bottom: 0;
+	border-top: 1px solid #ddd;
 }
 
-.exp-content h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.3rem;
-    color: #00f5ff;
+#nav li:first-child {
+	border-top: none;
 }
 
-.exp-meta {
-    color: #ff006e;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
+#nav a {
+	display: block;
+	padding: 0.75em 0;
+	color: #666;
+	text-decoration: none;
+	transition: color 0.3s;
 }
 
-.exp-content p {
-    color: #a0a0a0;
-    line-height: 1.8
+#nav a:hover {
+	color: #0096ff;
+}
+
+#nav a.active {
+	color: #0096ff;
+	font-weight: 700;
+}
+
+#header footer {
+	margin-top: auto;
+	padding-top: 2em;
+	border-top: 1px solid #ddd;
+}
+
+#header footer .icons {
+	margin: 1em 0 0 -0.3em;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#wrapper {
+	margin-left: 275px;
+	min-height: 100vh;
+	background: white;
+}
+
+#main {
+	padding: 0;
+}
+
+#main > section {
+	border-top: 1px solid #ddd;
+	padding: 3em 0;
 }
 
 #main > section:first-child {
@@ -375,125 +358,3 @@ section a:hover {
 .title {
     color: green;
 }
-/* ============================================
-   CONTACT SECTION
-   ============================================ */
-
-.contact {
-    padding: 6rem 2rem;
-    background: linear-gradient(180deg, transparent, rgba(0, 245, 255, 0.05));
-    border-top: 1px solid rgba(0, 245, 255, 0.2);
-    text-align: center;
-}
-
-.contact h2 {
-    margin-bottom: 2rem;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.social-icon {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 245, 255, 0.1);
-    border: 2px solid rgba(0, 245, 255, 0.3);
-    border-radius: 50%;
-    color: #00f5ff;
-    transition: all 0.3s ease;
-    font-size: 1.5rem;
-    text-decoration: none;
-}
-
-.social-icon:hover {
-    background: linear-gradient(135deg, #00f5ff, #ff006e);
-    color: #0a0e27;
-    border-color: #ff006e;
-    transform: rotate(360deg) scale(1.1);
-}
-
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
-
-@media (max-width: 768px) {
-    .nav-links {
-        gap: 1rem;
-    }
-
-    .hero {
-        flex-direction: column;
-        padding: 3rem 1rem;
-        min-height: auto;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-accent {
-        width: 200px;
-        height: 200px;
-    }
-
-    .experience-timeline::before {
-        left: 10px;
-    }
-
-    .exp-item {
-        flex-direction: column !important;
-    }
-
-    .exp-marker {
-        left: 10px;
-    }
-
-    .exp-content {
-        width: 100%;
-        margin-left: 40px;
-    }
-
-    .social-links {
-        gap: 1rem;
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .skills h2,
-    .experience h2,
-    .contact h2 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        font-size: 1.3rem;
-    }
-
-    .nav-links {
-        gap: 0.5rem;
-        font-size: 0.9rem;
-    }
-
-    .hero-content h1 {
-        font-size: 1.5rem;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
-    }
